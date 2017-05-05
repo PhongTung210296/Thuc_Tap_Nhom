@@ -1,4 +1,4 @@
-﻿namespace ThuySuHuynh
+﻿namespace QLNhanSu
 {
     partial class frmChucVu
     {

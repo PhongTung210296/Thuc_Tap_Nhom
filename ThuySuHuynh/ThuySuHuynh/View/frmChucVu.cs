@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ThuySuHuynh.Controller;
-using ThuySuHuynh.Model;
+using QLNhanSu.Controller;
+using QLNhanSu.Model;
 
-namespace ThuySuHuynh
+namespace QLNhanSu
 {
     public partial class frmChucVu : Form
     {

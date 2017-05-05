@@ -5,9 +5,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ThuySuHuynh.Model;
+using QLNhanSu.Model;
 
-namespace ThuySuHuynh.Controller
+namespace QLNhanSu.Controller
 {
     class ChucVuCtl
     {

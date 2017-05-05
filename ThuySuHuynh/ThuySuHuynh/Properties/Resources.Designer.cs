@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ThuySuHuynh.Properties
+namespace QLNhanSu.Properties
 {
 
 
