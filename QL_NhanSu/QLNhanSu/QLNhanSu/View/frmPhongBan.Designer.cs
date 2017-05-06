@@ -1,4 +1,4 @@
-﻿namespace QLNhanSu.View
+﻿namespace QLNhanSu_Dung.View
 {
     partial class frmPhongBan
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dvgPhongBan = new System.Windows.Forms.DataGridView();
+            this.dgvPhongBan = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaPB = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgPhongBan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +60,7 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.dvgPhongBan);
+            this.groupBox1.Controls.Add(this.dgvPhongBan);
             this.groupBox1.Location = new System.Drawing.Point(12, 246);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(903, 242);
@@ -68,16 +68,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách phòng ban";
             // 
-            // dvgPhongBan
+            // dgvPhongBan
             // 
-            this.dvgPhongBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvPhongBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dvgPhongBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgPhongBan.Location = new System.Drawing.Point(6, 19);
-            this.dvgPhongBan.Name = "dvgPhongBan";
-            this.dvgPhongBan.Size = new System.Drawing.Size(891, 217);
-            this.dvgPhongBan.TabIndex = 0;
+            this.dgvPhongBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhongBan.Location = new System.Drawing.Point(6, 19);
+            this.dgvPhongBan.Name = "dgvPhongBan";
+            this.dgvPhongBan.Size = new System.Drawing.Size(891, 217);
+            this.dgvPhongBan.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -108,7 +108,6 @@
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin phòng ban";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // btnHuy
             // 
@@ -330,7 +329,7 @@
             this.Text = "PhongBan";
             this.Load += new System.EventHandler(this.frmPhongBan_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dvgPhongBan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -340,7 +339,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dvgPhongBan;
+        private System.Windows.Forms.DataGridView dgvPhongBan;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;

@@ -24,3 +24,6 @@ C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\QL_NhanSu\QLNhanSu\QLNhanSu\o
 D:\Thuc TapNhom\Thuc_Tap_Nhom\QL_NhanSu\QLNhanSu\QLNhanSu\bin\Debug\QLNhanSu.exe.config
 D:\Thuc TapNhom\Thuc_Tap_Nhom\QL_NhanSu\QLNhanSu\QLNhanSu\obj\Debug\QLNhanSu.exe
 D:\Thuc TapNhom\Thuc_Tap_Nhom\QL_NhanSu\QLNhanSu\QLNhanSu\obj\Debug\QLNhanSu.pdb
+C:\Users\Hiep\Documents\GitHub\Thuc_Tap_Nhom\QL_NhanSu\QLNhanSu\QLNhanSu\bin\Debug\QLNhanSu.exe.config
+C:\Users\Hiep\Documents\GitHub\Thuc_Tap_Nhom\QL_NhanSu\QLNhanSu\QLNhanSu\obj\Debug\QLNhanSu.exe
+C:\Users\Hiep\Documents\GitHub\Thuc_Tap_Nhom\QL_NhanSu\QLNhanSu\QLNhanSu\obj\Debug\QLNhanSu.pdb
