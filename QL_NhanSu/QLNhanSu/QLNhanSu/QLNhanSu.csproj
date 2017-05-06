@@ -44,9 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\DamNhiemCtl.cs" />
     <Compile Include="Controller\PhongBanCtl.cs" />
     <Compile Include="Model\ConnectToSql.cs" />
+    <Compile Include="Model\DamNhiemObj.cs" />
     <Compile Include="Model\PhongBanObj.cs" />
+    <Compile Include="View\frmDamNhiem.cs" />
+    <Compile Include="View\frmDamNhiem.Designer.cs">
+      <DependentUpon>frmDamNhiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="View\frmPhongBan.Designer.cs">
       <DependentUpon>frmPhongBan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmDamNhiem.resx">
+      <DependentUpon>frmDamNhiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
