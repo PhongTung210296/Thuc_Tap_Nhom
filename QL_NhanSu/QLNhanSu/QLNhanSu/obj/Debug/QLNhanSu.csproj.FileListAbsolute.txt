@@ -18,3 +18,6 @@ C:\Users\Phong_Tung\Desktop\Thực Tập Nhóm\qlKhachSan\QlNhanSu\QLNhanSu\QLNh
 C:\Users\Phong_Tung\Desktop\Thực Tập Nhóm\qlKhachSan\QlNhanSu\QLNhanSu\QLNhanSu\obj\Debug\QLNhanSu.View.frmMain.resources
 C:\Users\Phong_Tung\Desktop\Thực Tập Nhóm\qlKhachSan\QlNhanSu\QLNhanSu\QLNhanSu\obj\Debug\QLNhanSu.View.frmNhanVien.resources
 C:\Users\Phong_Tung\Desktop\Thực Tập Nhóm\qlKhachSan\QlNhanSu\QLNhanSu\QLNhanSu\obj\Debug\QLNhanSu.csproj.GenerateResource.Cache
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\QL_NhanSu\QLNhanSu\QLNhanSu\bin\Debug\QLNhanSu.exe.config
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\QL_NhanSu\QLNhanSu\QLNhanSu\obj\Debug\QLNhanSu.exe
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\QL_NhanSu\QLNhanSu\QLNhanSu\obj\Debug\QLNhanSu.pdb
