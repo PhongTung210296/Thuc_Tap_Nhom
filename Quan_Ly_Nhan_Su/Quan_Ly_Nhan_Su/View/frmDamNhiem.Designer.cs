@@ -58,7 +58,6 @@
             this.dgvDamNhiem.Name = "dgvDamNhiem";
             this.dgvDamNhiem.Size = new System.Drawing.Size(1336, 472);
             this.dgvDamNhiem.TabIndex = 0;
-            this.dgvDamNhiem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDamNhiem_CellClick);
             // 
             // btnHuy
             // 

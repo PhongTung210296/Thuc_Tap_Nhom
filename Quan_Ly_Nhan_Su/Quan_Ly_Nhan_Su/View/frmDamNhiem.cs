@@ -43,30 +43,9 @@ namespace Quan_Ly_Nhan_Su.View
             dn1obj.MaNV = cbbMaNV.Text.ToString().Trim();
             dn1obj.MaCV = cbbMaCV.Text.ToString().Trim();
         }
-
         private void frmDamNhiem_Load(object sender, EventArgs e)
         {
 
-            dgvDamNhiem.DataSource = dnctl.GetData();
-            dgvDamNhiem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dis_en(false);
-        }
-
-        private void dgvDamNhiem_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                try
-                {
-                    txtThoiGian.Text = dgvDamNhiem.CurrentRow.Cells[0].Value.ToString();
-                    cbbMaNV.Text = dgvDamNhiem.CurrentRow.Cells[1].Value.ToString();
-                    cbbMaCV.Text = dgvDamNhiem.CurrentRow.Cells[2].Value.ToString();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -139,5 +118,6 @@ namespace Quan_Ly_Nhan_Su.View
             frmDamNhiem_Load(sender, e);
             dis_en(false);
         }
+    }
     }
 }
