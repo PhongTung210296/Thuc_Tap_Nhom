@@ -1,3 +1,4 @@
 F:\Bài tập web\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\bin\Debug\Quan_Ly_Nhan_Su.exe.config
 F:\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\bin\Debug\Quan_Ly_Nhan_Su.exe.config
 D:\Thuc TapNhom222222222\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\bin\Debug\Quan_Ly_Nhan_Su.exe.config
+D:\Thực Tập Nhóm\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\bin\Debug\Quan_Ly_Nhan_Su.exe.config
