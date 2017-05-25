@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
-using Phần_mềm_quản_lý_nhân_sự_V1._1.Object;
 using Quan_Ly_Nhan_Su.Object;
 
 namespace Quan_Ly_Nhan_Su.Model
 {
     class DamNhiemMod
     {
+
         ConnectToSql con = new ConnectToSql();
         SqlCommand cmd = new SqlCommand();
 
