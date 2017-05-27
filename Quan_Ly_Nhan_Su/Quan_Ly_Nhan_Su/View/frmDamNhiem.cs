@@ -119,5 +119,5 @@ namespace Quan_Ly_Nhan_Su.View
             dis_en(false);
         }
     }
-    }
+    
 }
