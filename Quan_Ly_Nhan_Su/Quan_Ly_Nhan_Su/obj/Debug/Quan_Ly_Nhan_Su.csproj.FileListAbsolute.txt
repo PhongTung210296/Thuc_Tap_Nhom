@@ -4,3 +4,19 @@ D:\Thuc TapNhom222222222\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\bin\Debug
 D:\Thực Tập Nhóm\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\bin\Debug\Quan_Ly_Nhan_Su.exe.config
 C:\Users\Hiep\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\bin\Debug\Quan_Ly_Nhan_Su.exe.config
 D:\ThucTapNhom2222\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\bin\Debug\Quan_Ly_Nhan_Su.exe.config
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\bin\Debug\Quan_Ly_Nhan_Su.exe.config
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.csprojResolveAssemblyReference.cache
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.View.frmChucVu.resources
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.View.frmDamNhiem.resources
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.View.frmHuongDan.resources
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.View.frmLogin.resources
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.frmMain.resources
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.Properties.Resources.resources
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.View.frmNhanVien.resources
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.View.frmPhongBan.resources
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.View.frmTrinhDoHocVan.resources
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.csproj.GenerateResource.Cache
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\bin\Debug\Quan_Ly_Nhan_Su.exe
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\bin\Debug\Quan_Ly_Nhan_Su.pdb
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.exe
+C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.pdb

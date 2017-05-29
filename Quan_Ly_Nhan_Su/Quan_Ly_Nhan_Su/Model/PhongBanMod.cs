@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using Phần_mềm_quản_lý_nhân_sự_V1._1.Object;
+using Quan_Ly_Nhan_Su.Model;
 namespace Phần_mềm_quản_lý_nhân_sự_V1._1.Model
 {
     class PhongBanMod
