@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Phần_mềm_quản_lý_nhân_sự_V1._1.View;
+using Quan_Ly_Nhan_Su.View;
 namespace Quan_Ly_Nhan_Su.View
 {
     public partial class frmLogin : Form

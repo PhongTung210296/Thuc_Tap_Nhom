@@ -45,7 +45,13 @@ namespace Quan_Ly_Nhan_Su.View
         }
         private void frmDamNhiem_Load(object sender, EventArgs e)
         {
-
+            // TODO: This line of code loads data into the 'quanLyNhanSuDataSet1.NhanVien' table. You can move, or remove it, as needed.
+            this.nhanVienTableAdapter.Fill(this.quanLyNhanSuDataSet1.NhanVien);
+            // TODO: This line of code loads data into the 'quanLyNhanSuDataSet.ChucVu' table. You can move, or remove it, as needed.
+            this.chucVuTableAdapter.Fill(this.quanLyNhanSuDataSet.ChucVu);
+            dis_en(false);
+            dgvDamNhiem.DataSource = dnctl.GetData();
+            dgvDamNhiem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -76,10 +82,6 @@ namespace Quan_Ly_Nhan_Su.View
                     {
                         MessageBox.Show("Xóakhông thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                else
-                {
-                    return;
                 }
             }
         }
@@ -117,6 +119,23 @@ namespace Quan_Ly_Nhan_Su.View
         {
             frmDamNhiem_Load(sender, e);
             dis_en(false);
+        }
+
+        private void dgvDamNhiem_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                try
+                {
+                    txtThoiGian.Text = dgvDamNhiem.CurrentRow.Cells[0].Value.ToString();
+                    cbbMaNV.Text = dgvDamNhiem.CurrentRow.Cells[1].Value.ToString();
+                    cbbMaCV.Text = dgvDamNhiem.CurrentRow.Cells[2].Value.ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
     
