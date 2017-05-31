@@ -20,3 +20,5 @@ C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_
 C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\bin\Debug\Quan_Ly_Nhan_Su.pdb
 C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.exe
 C:\Users\Phong_Tung\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.pdb
+C:\Users\Hiep\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.exe
+C:\Users\Hiep\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.pdb
