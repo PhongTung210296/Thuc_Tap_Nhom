@@ -32,6 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,11 +45,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\ChucVuMod.cs" />
     <Compile Include="Model\ConnectToSql.cs" />
+    <Compile Include="Model\DamNhiemMod.cs" />
     <Compile Include="Model\NhanVienMod.cs" />
+    <Compile Include="Model\PhongBanMod.cs" />
     <Compile Include="Model\TrinhDoHocVanMod.cs" />
+    <Compile Include="Object\ChucVuObj.cs" />
+    <Compile Include="Object\DamNhiemObj.cs" />
     <Compile Include="Object\NhanVienObj.cs" />
+    <Compile Include="Object\PhongBanObj.cs" />
     <Compile Include="Object\TrinhDoHocVanObj.cs" />
+    <Compile Include="QuanLyNhanSuDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyNhanSuDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhanSuDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyNhanSuDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmChucVu.Designer.cs">
+      <DependentUpon>frmChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmDamNhiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmDamNhiem.Designer.cs">
+      <DependentUpon>frmDamNhiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmHuongDan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,12 +104,24 @@
     <Compile Include="View\frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPhongBan.Designer.cs">
+      <DependentUpon>frmPhongBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmTrinhDoHocVan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmTrinhDoHocVan.Designer.cs">
       <DependentUpon>frmTrinhDoHocVan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmChucVu.resx">
+      <DependentUpon>frmChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmDamNhiem.resx">
+      <DependentUpon>frmDamNhiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmHuongDan.resx">
       <DependentUpon>frmHuongDan.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +143,9 @@
     <EmbeddedResource Include="View\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPhongBan.resx">
+      <DependentUpon>frmPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmTrinhDoHocVan.resx">
       <DependentUpon>frmTrinhDoHocVan.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +158,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QuanLyNhanSuDataSet.xsc">
+      <DependentUpon>QuanLyNhanSuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhanSuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyNhanSuDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyNhanSuDataSet.xss">
+      <DependentUpon>QuanLyNhanSuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhanSuDataSet1.xsc">
+      <DependentUpon>QuanLyNhanSuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhanSuDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyNhanSuDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyNhanSuDataSet1.xss">
+      <DependentUpon>QuanLyNhanSuDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

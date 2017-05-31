@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
-using Phần_mềm_quản_lý_nhân_sự_V1._1.Object;
-using Quan_Ly_Nhan_Su.Model;
-namespace Phần_mềm_quản_lý_nhân_sự_V1._1.Model
+using Quan_Ly_Nhan_Su.Object;
+
+namespace Quan_Ly_Nhan_Su.Model
 {
-    class PhongBanMod
+    class ChucVuMod
     {
         ConnectToSql con = new ConnectToSql();
         SqlCommand cmd = new SqlCommand();
@@ -17,7 +17,7 @@ namespace Phần_mềm_quản_lý_nhân_sự_V1._1.Model
         public DataTable GetData()
         {
             DataTable dt = new DataTable();
-            cmd.CommandText = "select * from PhongBan";
+            cmd.CommandText = "select * from ChucVu";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.strConn;
             try
@@ -37,9 +37,9 @@ namespace Phần_mềm_quản_lý_nhân_sự_V1._1.Model
         }
 
 
-        public bool AddPhongBan(PhongBanObj pbobj)
+        public bool AddChucVu(ChucVuObj cvobj)
         {
-            cmd.CommandText = "Insert into PhongBan values ('" + pbobj.MaPB + "',N'" + pbobj.TenPB + "','" + pbobj.MaTP + "','" + pbobj.NgayNC + "','" + pbobj.DiaDiem + "','" + pbobj.SDT + "','" + pbobj.SoNV + "')";
+            cmd.CommandText = "Insert into ChucVu values ('" + cvobj.MaCV + "',N'" + cvobj.TenCV + "');";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.strConn;
             try
@@ -59,9 +59,9 @@ namespace Phần_mềm_quản_lý_nhân_sự_V1._1.Model
         }
 
 
-        public bool DelPhongBan(string ma)
+        public bool DelChucVu(string ma)
         {
-            cmd.CommandText = "delete PhongBan where MaPB= '" + ma + "'";
+            cmd.CommandText = "delete ChucVu where MaCV= '" + ma + "'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.strConn;
             try
@@ -80,9 +80,9 @@ namespace Phần_mềm_quản_lý_nhân_sự_V1._1.Model
         }
 
 
-        public bool UpdatePhongBan(PhongBanObj pbobj)
+        public bool UpdatecChucVu(ChucVuObj cvobj)
         {
-            cmd.CommandText = " update PhongBan set TenPB=N'" + pbobj.TenPB + "',MaTP='" + pbobj.MaTP + "',NgayNC='" + pbobj.NgayNC + "',DiaDiem='" + pbobj.DiaDiem + "',SDT='" + pbobj.SDT + "',SoNV='" + pbobj.SoNV + "'where MaPB='" + pbobj.MaPB + "' ";
+            cmd.CommandText = " update ChucVu set TenCV=N'" + cvobj.TenCV + "' where MaCV= '" + cvobj.MaCV + "' ";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.strConn;
             try
@@ -101,10 +101,10 @@ namespace Phần_mềm_quản_lý_nhân_sự_V1._1.Model
             return true;
         }
 
-        public DataTable SeachPhongBan(string maPb)
+        public DataTable SeachChucVu(string MaCV)
         {
             DataTable dt = new DataTable();
-            cmd.CommandText = "select * from PhongBan  where MaNV like '%" + maPb + "%'";
+            cmd.CommandText = "select * from ChucVu  where MaCV like '%" + MaCV + "%'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.strConn;
             try

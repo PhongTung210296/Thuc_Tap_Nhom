@@ -12,20 +12,20 @@ using Quan_Ly_Nhan_Su.Object;
 
 namespace Quan_Ly_Nhan_Su.View
 {
-    public partial class frmDamNhiem : Form
+    public partial class frmChucVu : Form
     {
-        public frmDamNhiem()
+        public frmChucVu()
         {
             InitializeComponent();
         }
-        DamNhiemMod dnctl = new DamNhiemMod();
-        DamNhiemObj dnobj = new DamNhiemObj();
+        ChucVuMod cvctl = new ChucVuMod();
+        ChucVuObj cvobj = new ChucVuObj();
         int flag = 0;
+
         public void dis_en(bool e)
         {
-            txtThoiGian.Enabled = e;
-            cbbMaCV.Enabled = e;
-            cbbMaNV.Enabled = e;
+            txtMaCV.Enabled = e;
+            txtTenCV.Enabled = e;
             btnHuy.Enabled = e;
             btnLuu.Enabled = e;
             btnThem.Enabled = !e;
@@ -35,23 +35,35 @@ namespace Quan_Ly_Nhan_Su.View
 
         private void clean()
         {
-            txtThoiGian.Clear();
+            txtMaCV.Clear();
+            txtTenCV.Clear();
         }
-        private void GanDuLieu(DamNhiemObj dn1obj)
+        private void GanDuLieu(ChucVuObj cv1obj)
         {
-            dn1obj.ThoiGianCongTac = txtThoiGian.Text.ToString().Trim();
-            dn1obj.MaNV = cbbMaNV.Text.ToString().Trim();
-            dn1obj.MaCV = cbbMaCV.Text.ToString().Trim();
-        }
-        private void frmDamNhiem_Load(object sender, EventArgs e)
+            cv1obj.MaCV = txtMaCV.Text.ToString().Trim();
+            cv1obj.TenCV = txtTenCV.Text.ToString().Trim();
+        }   
+        private void frmChucVu_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'quanLyNhanSuDataSet1.NhanVien' table. You can move, or remove it, as needed.
-            this.nhanVienTableAdapter.Fill(this.quanLyNhanSuDataSet1.NhanVien);
-            // TODO: This line of code loads data into the 'quanLyNhanSuDataSet.ChucVu' table. You can move, or remove it, as needed.
-            this.chucVuTableAdapter.Fill(this.quanLyNhanSuDataSet.ChucVu);
+            dgvChucVu.DataSource = cvctl.GetData();
+            dgvChucVu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dis_en(false);
-            dgvDamNhiem.DataSource = dnctl.GetData();
-            dgvDamNhiem.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void dgvChucVu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                try
+                {
+                    txtMaCV.Text = dgvChucVu.CurrentRow.Cells[0].Value.ToString();
+                    txtTenCV.Text = dgvChucVu.CurrentRow.Cells[1].Value.ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -73,28 +85,32 @@ namespace Quan_Ly_Nhan_Su.View
             {
                 if (dr == DialogResult.Yes)
                 {
-                    if (dnctl.DelDamNhiem(txtThoiGian.Text.Trim()))
+                    if (cvctl.DelChucVu(txtMaCV.Text.Trim()))
                     {
                         MessageBox.Show("Xóa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        frmDamNhiem_Load(sender, e);
+                        frmChucVu_Load(sender, e);
                     }
                     else
                     {
                         MessageBox.Show("Xóakhông thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+                else
+                {
+                    return;
+                }
             }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            GanDuLieu(dnobj);
+            GanDuLieu(cvobj);
             if (flag == 0)   // thêm
             {
-                if (dnctl.AddDamNhiem(dnobj))
+                if (cvctl.AddChucVu(cvobj))
                 {
                     MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    frmDamNhiem_Load(sender, e);
+                    frmChucVu_Load(sender, e);
                 }
                 else
                 {
@@ -103,10 +119,10 @@ namespace Quan_Ly_Nhan_Su.View
             }
             else            // sửa
             {
-                if (dnctl.UpdateDamNhiem(dnobj))
+                if (cvctl.UpdatecChucVu(cvobj))
                 {
                     MessageBox.Show("Sửa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    frmDamNhiem_Load(sender, e);
+                    frmChucVu_Load(sender, e);
                 }
                 else
                 {
@@ -117,26 +133,8 @@ namespace Quan_Ly_Nhan_Su.View
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            frmDamNhiem_Load(sender, e);
+            frmChucVu_Load(sender, e);
             dis_en(false);
         }
-
-        private void dgvDamNhiem_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                try
-                {
-                    txtThoiGian.Text = dgvDamNhiem.CurrentRow.Cells[0].Value.ToString();
-                    cbbMaNV.Text = dgvDamNhiem.CurrentRow.Cells[1].Value.ToString();
-                    cbbMaCV.Text = dgvDamNhiem.CurrentRow.Cells[2].Value.ToString();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        }
     }
-    
 }
