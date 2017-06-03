@@ -19,12 +19,12 @@ namespace Quan_Ly_Nhan_Su.View
         {
             InitializeComponent();
         }
-        PhongBanMod pbmod = new PhongBanMod();
-        PhongBanObj pbobj = new PhongBanObj();
+        PhongBanMod PbMod = new PhongBanMod();
+        PhongBanObj PBObj = new PhongBanObj();
         int flag = 0;
         private void frmPhongBan_Load(object sender, EventArgs e)
         {
-            dvgPhongBan.DataSource = pbmod.GetData();
+            dvgPhongBan.DataSource = PbMod.GetData();
             dvgPhongBan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dis_en(false);
             LoadData();
@@ -117,7 +117,7 @@ namespace Quan_Ly_Nhan_Su.View
             {
                 if (dr == DialogResult.Yes)
                 {
-                    if (pbmod.DelPhongBan(txtMaPB.Text.Trim()))
+                    if (PbMod.DelPhongBan(txtMaPB.Text.Trim()))
                     {
                         MessageBox.Show("Xóa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         frmPhongBan_Load(sender, e);
@@ -136,10 +136,10 @@ namespace Quan_Ly_Nhan_Su.View
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            GanDuLieu(pbobj);
+            GanDuLieu(PBObj);
             if (flag == 0)   // thêm
             {
-                if (pbmod.AddPhongBan(pbobj))
+                if (PbMod.AddPhongBan(PBObj))
                 {
                     MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frmPhongBan_Load(sender, e);
@@ -151,7 +151,7 @@ namespace Quan_Ly_Nhan_Su.View
             }
             else            // sửa
             {
-                if (pbmod.UpdatePhongBan(pbobj))
+                if (PbMod.UpdatePhongBan(PBObj))
                 {
                     MessageBox.Show("Sửa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frmPhongBan_Load(sender, e);

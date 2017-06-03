@@ -62,8 +62,8 @@ namespace Phần_mềm_quản_lý_nhân_sự_V1._1.Model
 
         public bool DelPhongBan(string ma)
         {
-            cmd.CommandText = "delete PhongBan where MaPB= '" + ma + "'";
             cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "delete PhongBan where MaPB = '" + ma + "'";
             cmd.Connection = con.strConn;
             try
             {
