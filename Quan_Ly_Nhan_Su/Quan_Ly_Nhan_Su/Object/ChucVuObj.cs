@@ -14,10 +14,10 @@ namespace Quan_Ly_Nhan_Su.Object
         {
 
         }
-        public ChucVuObj(string macv, string tencv)
+        public ChucVuObj(string MaCV, string TenCV)
         {
-            this.MaCV = macv;
-            this.TenCV = tencv;
+            this.MaCV = MaCV;
+            this.TenCV = TenCV;
         }
     }
 }
