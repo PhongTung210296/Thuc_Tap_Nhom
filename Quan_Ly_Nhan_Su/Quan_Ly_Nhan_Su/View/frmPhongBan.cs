@@ -124,7 +124,7 @@ namespace Quan_Ly_Nhan_Su.View
                     }
                     else
                     {
-                        MessageBox.Show("Xóakhông thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Xóa không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -137,7 +137,7 @@ namespace Quan_Ly_Nhan_Su.View
         private void btnLuu_Click(object sender, EventArgs e)
         {
             GanDuLieu(PBObj);
-            if (flag == 0)   // thêm
+            if (flag == 0)
             {
                 if (PbMod.AddPhongBan(PBObj))
                 {
@@ -149,7 +149,7 @@ namespace Quan_Ly_Nhan_Su.View
                     MessageBox.Show("Thêm không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else            // sửa
+            else
             {
                 if (PbMod.UpdatePhongBan(PBObj))
                 {
