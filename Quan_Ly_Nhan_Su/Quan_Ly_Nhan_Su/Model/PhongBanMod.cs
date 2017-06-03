@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using Phần_mềm_quản_lý_nhân_sự_V1._1.Object;
 using Quan_Ly_Nhan_Su.Model;
+
 namespace Phần_mềm_quản_lý_nhân_sự_V1._1.Model
 {
     class PhongBanMod
@@ -37,9 +38,9 @@ namespace Phần_mềm_quản_lý_nhân_sự_V1._1.Model
         }
 
 
-        public bool AddPhongBan(PhongBanObj pbobj)
+        public bool AddPhongBan(PhongBanObj PBobj)
         {
-            cmd.CommandText = "Insert into PhongBan values ('" + pbobj.MaPB + "',N'" + pbobj.TenPB + "','" + pbobj.MaTP + "','" + pbobj.NgayNC + "','" + pbobj.DiaDiem + "','" + pbobj.SDT + "','" + pbobj.SoNV + "')";
+            cmd.CommandText = "Insert into PhongBan values ('" + PBobj.MaPB + "',N'" + PBobj.TenPB + "','" + PBobj.MaTP + "','" + PBobj.NgayNC + "','" + PBobj.DiaDiem + "','" + PBobj.SDT + "','" + PBobj.SoNV + "')";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.strConn;
             try
@@ -80,9 +81,9 @@ namespace Phần_mềm_quản_lý_nhân_sự_V1._1.Model
         }
 
 
-        public bool UpdatePhongBan(PhongBanObj pbobj)
+        public bool UpdatePhongBan(PhongBanObj PBobj)
         {
-            cmd.CommandText = " update PhongBan set TenPB=N'" + pbobj.TenPB + "',MaTP='" + pbobj.MaTP + "',NgayNC='" + pbobj.NgayNC + "',DiaDiem='" + pbobj.DiaDiem + "',SDT='" + pbobj.SDT + "',SoNV='" + pbobj.SoNV + "'where MaPB='" + pbobj.MaPB + "' ";
+            cmd.CommandText = " update PhongBan set TenPB=N'" + PBobj.TenPB + "',MaTP='" + PBobj.MaTP + "',NgayNC='" + PBobj.NgayNC + "',DiaDiem='" + PBobj.DiaDiem + "',SDT='" + PBobj.SDT + "',SoNV='" + PBobj.SoNV + "'where MaPB='" + PBobj.MaPB + "' ";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.strConn;
             try
