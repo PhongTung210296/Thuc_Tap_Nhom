@@ -103,7 +103,29 @@ namespace Quan_Ly_Nhan_Su.View
 
         private void GanDuLieu(NhanVienObj nv1obj)
         {
-          
+            nv1obj.MaNV = txtMaNV.Text.ToString().Trim();
+            nv1obj.HoTen = txtHoTen.Text.ToString().Trim();
+            nv1obj.NgaySinh = dtNgaySinh.Value;
+            if (rbtNam.Checked)
+            {
+                nv1obj.GioiTinh = "Nam";
+            }
+            if (rbtNu.Checked)
+            {
+                nv1obj.GioiTinh = "Nu";
+            }
+            nv1obj.Luong = txtLuong.Text.ToString().Trim();
+            nv1obj.MaNGS = cbbMaNGS.Text.ToString().Trim();
+            nv1obj.MaPB = cbbMaPB.Text.ToString().Trim();
+            nv1obj.SDT = txtSDT.Text.ToString().Trim();
+            nv1obj.MaTDHV = cbbMaTDHV.Text.ToString().Trim();
+            nv1obj.DiaChi = txtDiaChi.Text.ToString().Trim();
+            nv1obj.QuocTich = txtQuocTich.Text.ToString().Trim();
+            nv1obj.DanToc = txtDanToc.Text.ToString().Trim();
+            nv1obj.TonGiao = txtTonGiao.Text.ToString().Trim();
+            nv1obj.SoCMTND = txtCMT.Text.ToString().Trim();
+            nv1obj.NgayCap = dtNgayCap.Value;
+            nv1obj.NoiCap = txtNoiCap.Text.ToString().Trim();
         }
 
         private void dvgNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -147,23 +169,70 @@ namespace Quan_Ly_Nhan_Su.View
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            
+            flag = 0;
+            clean();
+            dis_en(true);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
 
-            
+            flag = 1;
+            dis_en(true);
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-           
+            DialogResult dr = MessageBox.Show("Bạn có thật sự muốn xóa ?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            {
+                if (dr == DialogResult.Yes)
+                {
+                    if (nv.DelNhanVien(txtMaNV.Text.Trim()))
+                    {
+                        MessageBox.Show("Xóa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        frmNhanVien_Load(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóakhông thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-           
+            GanDuLieu(nnvobj);
+            if (flag == 0)   // thêm
+            {
+                if (nv.AddNhanVien(nnvobj))
+                {
+                    MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmNhanVien_Load(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else            // sửa
+            {
+                if (nv.UpdateNhanVien(nnvobj))
+                {
+                    MessageBox.Show("Sửa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmNhanVien_Load(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show("Sửa không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
 
         }
 
