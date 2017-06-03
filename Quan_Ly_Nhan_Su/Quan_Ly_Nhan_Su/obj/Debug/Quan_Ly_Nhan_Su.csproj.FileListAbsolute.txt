@@ -24,3 +24,5 @@ C:\Users\Hiep\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj
 C:\Users\Hiep\Documents\GitHub\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.pdb
 F:\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.exe
 F:\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.pdb
+D:\Thực Tập Nhóm\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.exe
+D:\Thực Tập Nhóm\Thuc_Tap_Nhom\Quan_Ly_Nhan_Su\Quan_Ly_Nhan_Su\obj\Debug\Quan_Ly_Nhan_Su.pdb
