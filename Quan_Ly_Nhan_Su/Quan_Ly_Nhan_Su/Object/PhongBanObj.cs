@@ -19,15 +19,15 @@ namespace Phần_mềm_quản_lý_nhân_sự_V1._1.Object
         {
 
         }
-        public PhongBanObj(string mapb, string tenpb, string matp, DateTime ngaync, string diadiem, string sdt, string sonv)
+        public PhongBanObj(string maPB, string tenPB, string maTP, DateTime ngayNC, string diaDiem, string SDT, string soNV)
         {
-            this.MaPB = mapb;
-            this.TenPB = tenpb;
-            this.MaTP = matp;
-            this.NgayNC = ngaync;
-            this.DiaDiem = diadiem;
-            this.SDT = sdt;
-            this.SoNV = sonv;
+            this.MaPB = maPB;
+            this.TenPB = tenPB;
+            this.MaTP = maTP;
+            this.NgayNC = ngayNC;
+            this.DiaDiem = diaDiem;
+            this.SDT = SDT;
+            this.SoNV = soNV;
         }
 
     }
