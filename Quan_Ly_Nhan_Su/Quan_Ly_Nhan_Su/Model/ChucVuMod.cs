@@ -59,9 +59,9 @@ namespace Quan_Ly_Nhan_Su.Model
         }
 
 
-        public bool DelChucVu(string ma)
+        public bool DelChucVu(string maCV)
         {
-            cmd.CommandText = "delete ChucVu where MaCV= '" + ma + "'";
+            cmd.CommandText = "delete ChucVu where MaCV= '" + maCV + "'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.strConn;
             try

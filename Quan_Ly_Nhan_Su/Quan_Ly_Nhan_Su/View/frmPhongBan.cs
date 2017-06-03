@@ -87,15 +87,15 @@ namespace Quan_Ly_Nhan_Su.View
 
         }
 
-        private void GanDuLieu(PhongBanObj pb1obj)
+        private void GanDuLieu(PhongBanObj PbObj)
         {
-            pb1obj.MaPB = txtMaPB.Text.ToString().Trim();
-            pb1obj.TenPB = txtTenPB.Text.ToString().Trim();
-            pb1obj.MaTP = txtMaTP.Text.ToString().Trim();
-            pb1obj.NgayNC = dtNgayNC.Value;
-            pb1obj.DiaDiem = txtDiaDiem.Text.ToString().Trim();
-            pb1obj.SDT = txtSDT.Text.ToString().Trim();
-            pb1obj.SoNV = txtSoNV.Text.ToString().Trim();
+            PbObj.MAPB = txtMaPB.Text.ToString().Trim();
+            PbObj.TENPB = txtTenPB.Text.ToString().Trim();
+            PbObj.MATP = txtMaTP.Text.ToString().Trim();
+            PbObj.NGAYNC = dtNgayNC.Value;
+            PbObj.DIADIEM = txtDiaDiem.Text.ToString().Trim();
+            PbObj.SDT = txtSDT.Text.ToString().Trim();
+            PbObj.SONV = txtSoNV.Text.ToString().Trim();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
