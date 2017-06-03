@@ -179,6 +179,7 @@ namespace Quan_Ly_Nhan_Su.View
 
             flag = 1;
             dis_en(true);
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -231,6 +232,7 @@ namespace Quan_Ly_Nhan_Su.View
                     MessageBox.Show("Sửa không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
 
         }
 

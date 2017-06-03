@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Quan_Ly_Nhan_Su.View;
 namespace Quan_Ly_Nhan_Su
 {
     static class Program
@@ -16,7 +16,7 @@ namespace Quan_Ly_Nhan_Su
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new frmLogin());
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgvDamNhiem = new System.Windows.Forms.DataGridView();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -42,9 +43,19 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbbMaCV = new System.Windows.Forms.ComboBox();
             this.cbbMaNV = new System.Windows.Forms.ComboBox();
+            this.quanLyNhanSuDataSet = new Quan_Ly_Nhan_Su.QuanLyNhanSuDataSet();
+            this.chucVuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chucVuTableAdapter = new Quan_Ly_Nhan_Su.QuanLyNhanSuDataSetTableAdapters.ChucVuTableAdapter();
+            this.quanLyNhanSuDataSet1 = new Quan_Ly_Nhan_Su.QuanLyNhanSuDataSet1();
+            this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nhanVienTableAdapter = new Quan_Ly_Nhan_Su.QuanLyNhanSuDataSet1TableAdapters.NhanVienTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDamNhiem)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyNhanSuDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chucVuBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyNhanSuDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvDamNhiem
@@ -53,21 +64,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDamNhiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDamNhiem.Location = new System.Drawing.Point(9, 29);
-            this.dgvDamNhiem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvDamNhiem.Location = new System.Drawing.Point(6, 19);
             this.dgvDamNhiem.Name = "dgvDamNhiem";
-            this.dgvDamNhiem.Size = new System.Drawing.Size(1336, 472);
+            this.dgvDamNhiem.Size = new System.Drawing.Size(891, 307);
             this.dgvDamNhiem.TabIndex = 0;
+            this.dgvDamNhiem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDamNhiem_CellClick);
             // 
             // btnHuy
             // 
             this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnHuy.Enabled = false;
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(969, 143);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnHuy.Location = new System.Drawing.Point(646, 93);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(112, 68);
+            this.btnHuy.Size = new System.Drawing.Size(75, 44);
             this.btnHuy.TabIndex = 38;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -78,10 +88,9 @@
             this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLuu.Enabled = false;
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(777, 143);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLuu.Location = new System.Drawing.Point(518, 93);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(112, 68);
+            this.btnLuu.Size = new System.Drawing.Size(75, 44);
             this.btnLuu.TabIndex = 37;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -91,10 +100,9 @@
             // 
             this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(592, 143);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnXoa.Location = new System.Drawing.Point(395, 93);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(112, 68);
+            this.btnXoa.Size = new System.Drawing.Size(75, 44);
             this.btnXoa.TabIndex = 36;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -104,10 +112,9 @@
             // 
             this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(414, 143);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSua.Location = new System.Drawing.Point(276, 93);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(112, 68);
+            this.btnSua.Size = new System.Drawing.Size(75, 44);
             this.btnSua.TabIndex = 35;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -117,10 +124,9 @@
             // 
             this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(230, 143);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThem.Location = new System.Drawing.Point(153, 93);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(112, 68);
+            this.btnThem.Size = new System.Drawing.Size(75, 44);
             this.btnThem.TabIndex = 34;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -131,20 +137,18 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 94);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(15, 61);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 20);
+            this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 13;
             this.label7.Text = "Mã NV";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(681, 42);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(454, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 20);
+            this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Mã Chức Vụ";
             // 
@@ -153,10 +157,9 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 37);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(15, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 20);
+            this.label1.Size = new System.Drawing.Size(96, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Thời gian công tác";
             // 
@@ -165,10 +168,9 @@
             this.txtThoiGian.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtThoiGian.Enabled = false;
-            this.txtThoiGian.Location = new System.Drawing.Point(176, 29);
-            this.txtThoiGian.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtThoiGian.Location = new System.Drawing.Point(117, 19);
             this.txtThoiGian.Name = "txtThoiGian";
-            this.txtThoiGian.Size = new System.Drawing.Size(278, 26);
+            this.txtThoiGian.Size = new System.Drawing.Size(187, 20);
             this.txtThoiGian.TabIndex = 0;
             // 
             // groupBox1
@@ -177,11 +179,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.dgvDamNhiem);
-            this.groupBox1.Location = new System.Drawing.Point(18, 240);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Location = new System.Drawing.Point(12, 156);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(1354, 511);
+            this.groupBox1.Size = new System.Drawing.Size(903, 332);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách DamNhiem";
@@ -201,40 +201,71 @@
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.txtThoiGian);
-            this.groupBox3.Location = new System.Drawing.Point(18, 20);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Location = new System.Drawing.Point(12, 13);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Size = new System.Drawing.Size(1354, 220);
+            this.groupBox3.Size = new System.Drawing.Size(903, 143);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin phòng ban";
             // 
             // cbbMaCV
             // 
+            this.cbbMaCV.DataSource = this.chucVuBindingSource;
+            this.cbbMaCV.DisplayMember = "MaCV";
             this.cbbMaCV.FormattingEnabled = true;
-            this.cbbMaCV.Location = new System.Drawing.Point(801, 32);
-            this.cbbMaCV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbbMaCV.Location = new System.Drawing.Point(534, 21);
             this.cbbMaCV.Name = "cbbMaCV";
-            this.cbbMaCV.Size = new System.Drawing.Size(278, 28);
+            this.cbbMaCV.Size = new System.Drawing.Size(187, 21);
             this.cbbMaCV.TabIndex = 40;
+            this.cbbMaCV.ValueMember = "MaCV";
             // 
             // cbbMaNV
             // 
+            this.cbbMaNV.DataSource = this.nhanVienBindingSource;
+            this.cbbMaNV.DisplayMember = "MaNV";
             this.cbbMaNV.FormattingEnabled = true;
-            this.cbbMaNV.Location = new System.Drawing.Point(176, 89);
-            this.cbbMaNV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbbMaNV.Location = new System.Drawing.Point(117, 58);
             this.cbbMaNV.Name = "cbbMaNV";
-            this.cbbMaNV.Size = new System.Drawing.Size(278, 28);
+            this.cbbMaNV.Size = new System.Drawing.Size(187, 21);
             this.cbbMaNV.TabIndex = 39;
+            this.cbbMaNV.ValueMember = "MaNV";
+            // 
+            // quanLyNhanSuDataSet
+            // 
+            this.quanLyNhanSuDataSet.DataSetName = "QuanLyNhanSuDataSet";
+            this.quanLyNhanSuDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // chucVuBindingSource
+            // 
+            this.chucVuBindingSource.DataMember = "ChucVu";
+            this.chucVuBindingSource.DataSource = this.quanLyNhanSuDataSet;
+            // 
+            // chucVuTableAdapter
+            // 
+            this.chucVuTableAdapter.ClearBeforeFill = true;
+            // 
+            // quanLyNhanSuDataSet1
+            // 
+            this.quanLyNhanSuDataSet1.DataSetName = "QuanLyNhanSuDataSet1";
+            this.quanLyNhanSuDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nhanVienBindingSource
+            // 
+            this.nhanVienBindingSource.DataMember = "NhanVien";
+            this.nhanVienBindingSource.DataSource = this.quanLyNhanSuDataSet1;
+            // 
+            // nhanVienTableAdapter
+            // 
+            this.nhanVienTableAdapter.ClearBeforeFill = true;
             // 
             // frmDamNhiem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1390, 771);
+            this.ClientSize = new System.Drawing.Size(908, 482);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmDamNhiem";
             this.Text = "frmDamNhiem";
             this.Load += new System.EventHandler(this.frmDamNhiem_Load);
@@ -242,6 +273,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyNhanSuDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chucVuBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyNhanSuDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -262,5 +297,11 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox cbbMaCV;
         private System.Windows.Forms.ComboBox cbbMaNV;
+        private QuanLyNhanSuDataSet quanLyNhanSuDataSet;
+        private System.Windows.Forms.BindingSource chucVuBindingSource;
+        private QuanLyNhanSuDataSetTableAdapters.ChucVuTableAdapter chucVuTableAdapter;
+        private QuanLyNhanSuDataSet1 quanLyNhanSuDataSet1;
+        private System.Windows.Forms.BindingSource nhanVienBindingSource;
+        private QuanLyNhanSuDataSet1TableAdapters.NhanVienTableAdapter nhanVienTableAdapter;
     }
 }

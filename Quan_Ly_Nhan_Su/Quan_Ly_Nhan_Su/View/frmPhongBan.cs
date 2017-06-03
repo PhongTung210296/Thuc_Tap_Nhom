@@ -19,12 +19,12 @@ namespace Quan_Ly_Nhan_Su.View
         {
             InitializeComponent();
         }
-        PhongBanMod pbmod = new PhongBanMod();
-        PhongBanObj pbobj = new PhongBanObj();
+        PhongBanMod PbMod = new PhongBanMod();
+        PhongBanObj PBObj = new PhongBanObj();
         int flag = 0;
         private void frmPhongBan_Load(object sender, EventArgs e)
         {
-            dvgPhongBan.DataSource = pbmod.GetData();
+            dvgPhongBan.DataSource = PbMod.GetData();
             dvgPhongBan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dis_en(false);
             LoadData();
@@ -87,15 +87,15 @@ namespace Quan_Ly_Nhan_Su.View
 
         }
 
-        private void GanDuLieu(PhongBanObj pb1obj)
+        private void GanDuLieu(PhongBanObj PbObj)
         {
-            pb1obj.MaPB = txtMaPB.Text.ToString().Trim();
-            pb1obj.TenPB = txtTenPB.Text.ToString().Trim();
-            pb1obj.MaTP = txtMaTP.Text.ToString().Trim();
-            pb1obj.NgayNC = dtNgayNC.Value;
-            pb1obj.DiaDiem = txtDiaDiem.Text.ToString().Trim();
-            pb1obj.SDT = txtSDT.Text.ToString().Trim();
-            pb1obj.SoNV = txtSoNV.Text.ToString().Trim();
+            PbObj.MAPB = txtMaPB.Text.ToString().Trim();
+            PbObj.TENPB = txtTenPB.Text.ToString().Trim();
+            PbObj.MATP = txtMaTP.Text.ToString().Trim();
+            PbObj.NGAYNC = dtNgayNC.Value;
+            PbObj.DIADIEM = txtDiaDiem.Text.ToString().Trim();
+            PbObj.SDT = txtSDT.Text.ToString().Trim();
+            PbObj.SONV = txtSoNV.Text.ToString().Trim();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -117,14 +117,14 @@ namespace Quan_Ly_Nhan_Su.View
             {
                 if (dr == DialogResult.Yes)
                 {
-                    if (pbmod.DelPhongBan(txtMaPB.Text.Trim()))
+                    if (PbMod.DelPhongBan(txtMaPB.Text.Trim()))
                     {
                         MessageBox.Show("Xóa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         frmPhongBan_Load(sender, e);
                     }
                     else
                     {
-                        MessageBox.Show("Xóakhông thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Xóa không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -136,10 +136,10 @@ namespace Quan_Ly_Nhan_Su.View
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            GanDuLieu(pbobj);
-            if (flag == 0)   // thêm
+            GanDuLieu(PBObj);
+            if (flag == 0)
             {
-                if (pbmod.AddPhongBan(pbobj))
+                if (PbMod.AddPhongBan(PBObj))
                 {
                     MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frmPhongBan_Load(sender, e);
@@ -149,9 +149,9 @@ namespace Quan_Ly_Nhan_Su.View
                     MessageBox.Show("Thêm không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else            // sửa
+            else
             {
-                if (pbmod.UpdatePhongBan(pbobj))
+                if (PbMod.UpdatePhongBan(PBObj))
                 {
                     MessageBox.Show("Sửa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frmPhongBan_Load(sender, e);
